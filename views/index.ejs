@@ -1,10 +1,22 @@
 <%- include("partials/header.ejs")%>
 
 <div class="container">
-
-<h1>Hellow. This is basic skeleton by EJS</h1>
-<h2>Sample word: <%= sample %></h2>
-
+  <h1>Hellow. This is current position of ISS</h1>
+  <br />
+  <h2>Latitude: <%= issPosition.latitude %></h2>
+  <h2>Longitude: <%= issPosition.longitude %></h2>
 </div>
+
+<div class="form-group row">
+  <div class="col-sm-10">
+    <button onclick="redirectToGoogleMaps()" class="btn btn-primary">See in Google map</button>
+  </div>
+</div>
+
+<!-- TODO
+1. Show in google map
+2. Show currend date and time 
+
+-->
 
 <%- include("partials/footer.ejs")%>

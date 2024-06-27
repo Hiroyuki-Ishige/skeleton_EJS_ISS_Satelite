@@ -1,9 +1,9 @@
 
 </main>
-<footer>
+
   <!-- <div class ="container"> -->
 
-    <footer class="py-3 my-4">
+<footer class="py-3 my-4">
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
         <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
@@ -13,8 +13,6 @@
       </ul>
       <p class="text-center text-body-secondary">© <%= new Date().getFullYear() %> Company, Inc</p>
     <!-- </div> -->
-    </footer>
-
 </footer>
   
 <!-- enable to use icons -->
@@ -25,5 +23,19 @@
 
 <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- Function -->
+ <script>
+  function redirectToGoogleMaps(){
+      const latitude = "<%= issPosition.latitude %>";
+      const longitude = "<%= issPosition.longitude %>";
+      const zoomLevel = 1; // Minimum zoom level
+      const url = `https://www.google.com/maps/place/${latitude},${longitude}/@${latitude},${longitude},${zoomLevel}z`;
+    
+      window.open(url, "_blank");
+  }
+
+ </script>
+
 </body>
 </html>
